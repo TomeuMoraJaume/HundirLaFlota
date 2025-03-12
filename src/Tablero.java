@@ -1,26 +1,25 @@
 public class Tablero {
     private int alsada = 10;
     private int amplada = 10;
-    private char[][] tablero;
+    private Casella[][] tablero;
     public Tablero() {
-        tablero = new char[alsada][alsada];
-        omplirTablero(tablero);
-        imprimirTablero(tablero);
+        tablero = new Casella[alsada][amplada];
+        omplirTablero();
+        imprimirTablero();
     }
-    private void omplirTablero(char[][] tablero) {
+    private void omplirTablero() {
         for (int i = 0; i < alsada; i++) {
-            for (int j = 0; j < alsada; j++) {
-                tablero[i][j] = '◻';
+            for (int j = 0; j < amplada; j++) {
+                tablero[i][j] = new Casella('◻');
             }
         }
     }
-    private void imprimirTablero(char[][] tablero) {
+    private void imprimirTablero() {
         for (int i = 0; i < alsada; i++) {
-            for (int j = 0; j < alsada; j++) {
+            for (int j = 0; j < amplada; j++) {
                 System.out.print(tablero[i][j] + " ");
             }
             System.out.println(" ");
         }
     }
-
 }
