@@ -10,7 +10,8 @@ public class Tablero {
     private void omplirTablero() {
         for (int i = 0; i < alsada; i++) {
             for (int j = 0; j < amplada; j++) {
-                tablero[i][j] = new Casella('◻');
+                tablero[i][j] = new Casella('◻' , i , j );
+
             }
         }
     }
