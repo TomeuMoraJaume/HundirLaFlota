@@ -10,6 +10,7 @@ public enum Tipubarco {
     private final int totalBarcos;
     private final char simbol;
 
+
     Tipubarco(int lonjitud, String nom , int totalBarcos, char simbol) {
         this.lonjitud = lonjitud;
         this.nom = nom;
