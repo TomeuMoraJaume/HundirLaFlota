@@ -22,7 +22,13 @@ public class Tablero {
     }
 
     public void imprimirTablero() {
+        System.out.print("  ");
+        for (int j = 0; j < amplada; j++) {
+            System.out.print(j + " ");
+        }
+        System.out.println();
         for (int i = 0; i < alsada; i++) {
+            System.out.print(i + " ");
             for (int j = 0; j < amplada; j++) {
                 System.out.print(tablero[i][j] + " ");
             }
