@@ -11,6 +11,7 @@ public class Casella {
         } else if (simbol != '-' ){
             this.simbol = simbol;
             barco = new Barco(simbol);
+            this.destapada = false;
         }
     }
 
@@ -18,15 +19,24 @@ public class Casella {
     public String toString() {
         if (destapada) {
             return String.valueOf(simbol);
-        } else {
-            simbol = '-';
-            return String.valueOf(simbol);
+        } else if (simbol == '·') {
+            if (destapada) {
+                simbol = '·';
+            } else {
+                simbol = '-';
+                return String.valueOf(simbol);
+            }
         }
-
+        return "·";
     }
+
 
 
     public char getSimbol() {
         return simbol;
+    }
+
+    public void setDestapat(boolean destipada) {
+        this.destapada = destipada;
     }
 }

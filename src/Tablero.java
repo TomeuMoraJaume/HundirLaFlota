@@ -11,7 +11,6 @@ public class Tablero {
         tablero = new Casella[alsada][amplada];
         omplirTablero();
         generacioBarcos();
-        imprimirTablero();
     }
 
     private void omplirTablero() {
@@ -22,7 +21,7 @@ public class Tablero {
         }
     }
 
-    private void imprimirTablero() {
+    public void imprimirTablero() {
         for (int i = 0; i < alsada; i++) {
             for (int j = 0; j < amplada; j++) {
                 System.out.print(tablero[i][j] + " ");
@@ -111,5 +110,9 @@ public class Tablero {
         for (int i = 0; i < Tipubarco.b1.getTotalBarcos(); i++) {
             creacioBarcos(Tipubarco.b1);
         }
+    }
+
+    public void destaparBarco(int a, int b ){
+        tablero[a][b].setDestapat(true);
     }
 }
